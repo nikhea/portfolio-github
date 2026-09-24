@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fortune I. Ugbodaga — Full-Stack Developer</title>
+<meta name="description" content="Fortune I. Ugbodaga builds storefronts, SaaS platforms, CMS back offices and email systems with Next.js, Node.js and Go." />
+<meta name="theme-color" content="#17191d" />
+<link rel="icon" href="images/avatar.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">Fortune</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="https://docs.google.com/document/d/1xCHfAJGJ1-YddRXk8pcirtfGIwJ8XCWfhhvr0ttNskM/edit?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <a class="btn btn-small" href="mailto:imonikheaugbodaga@gmail.com">Hire me</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main id="top" class="container">
+
+  <section class="hero">
+    <div class="hero-grid">
+      <img class="avatar" src="images/avatar.png" alt="Portrait of Fortune I. Ugbodaga" width="220" height="220" />
+      <div class="hero-text">
+        <p class="kicker">Hello, my name is</p>
+        <h1>Fortune I. Ugbodaga.</h1>
+        <h2>I build products end to end, from storefront to API to inbox.</h2>
+        <p class="lede">Full-stack and AI systems engineer with 4+ years turning frameworks, APIs, and AI into production software. I build multi-tenant SaaS, headless CMS platforms, AI agents, automation, and backend systems from React and TanStack to Hono, NestJS, Go, PostgreSQL, Redis, MCP, RAG, and Mastra. I care about software that ships, scales, and keeps working after launch.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#work">See my work</a>
+          <a class="btn-outline" href="https://docs.google.com/document/d/1xCHfAJGJ1-YddRXk8pcirtfGIwJ8XCWfhhvr0ttNskM/edit?usp=sharing" target="_blank" rel="noopener">Resume</a>
+          <a class="btn-outline" href="https://github.com/nikhea" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-outline" href="https://www.linkedin.com/in/imonikheaugbodaga" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2 class="sec-title">Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Backend Engineer — Homz NG <span class="muted">(Remote)</span></h3>
+        <p class="date">Nov 2023 to Dec 2025</p>
+      </div>
+      <p class="muted">Multi-tenant estate management SaaS</p>
+      <ul>
+        <li>Cut the worst endpoints up to 80% with data model fixes, Redis caching and query work.</li>
+        <li>Ended duplicate and lost background work with retries and idempotent jobs.</li>
+        <li>Made access safe across tenants with OTP login and seeded role-based permissions.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Backend Engineer, Internship — Outfit NG <span class="muted">(Remote)</span></h3>
+        <p class="date">Oct 2021 to Aug 2023</p>
+      </div>
+      <p class="muted">Production web application backends</p>
+      <ul>
+        <li>Took query times down about 70% with caching, cutting database load.</li>
+        <li>Cut invalid submissions with validation and safer request handling.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Backend Developer — Freelance and Contract <span class="muted">(Remote)</span></h3>
+        <p class="date">2025 to Present</p>
+      </div>
+      <p class="muted">Production builds for clients</p>
+      <ul>
+        <li>Protected lead spend: credits deduct only on successful enrichment, top-ups that cannot double charge.</li>
+        <li>Made event operations dependable: ticketing, orders, payments and check-in in one Go service.</li>
+        <li>Held a public API stable across four versions while adding login, payments and jobs.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="work" class="section">
+    <h2 class="sec-title">Selected work</h2>
+
+    <article class="project">
+      <h3>Homz — estate management SaaS</h3>
+      <p class="stack">NestJS · MongoDB · Redis · BullMQ · CASL</p>
+      <p>A multi-tenant platform where estate managers and residents each see only what they should. Login runs on OTP with seeded role-based permissions. Estates carry Cloudinary covers, invitations go out as token links, and visitors get access codes tracked from sign-in to sign-out. Billing and invoices, including offline payments, run through background workers alongside image processing and mail delivery.</p>
+      <p class="result">Result: worst endpoints down up to 80%, no more duplicate or lost background work, and dev-to-prod deploys that behave the same.</p>
+    </article>
+
+    <article class="project">
+      <h3>ViableQuest — B2B lead generation</h3>
+      <p class="stack">NestJS · BullMQ · Apify · BrightData · Paystack</p>
+      <p>A pipeline that scrapes leads, verifies emails, enriches them with company and social data, then scores buyer personas with AI. Clients hold a credit wallet where each lead costs between half a credit and five, deducted only when enrichment succeeds, with a cost pre-check before every run. Top-ups come through Paystack webhooks built to never double charge, and all mail goes out queued.</p>
+      <p class="result">Result: clients pay only for verified leads, and payment or mail failures never lose anyone money or data.</p>
+    </article>
+
+    <article class="project">
+      <h3>Rallya — multi-tenant events in Go</h3>
+      <p class="stack">Gin · PostgreSQL · River · Redis · Casbin</p>
+      <p>One service covering organizations, access control, events, ticketing, Stripe orders, attendee check-in, notifications, media and audit. The schema is migration-only, background work runs on a queue, responses are cached, and every change passes formatting, linting, vetting, build and race-enabled tests before it merges.</p>
+      <p class="result">Result: event operations from ticket sale to door check-in in a single dependable deployment.</p>
+    </article>
+
+    <article class="project">
+      <h3>RMFTalents — AI talent matching</h3>
+      <p class="stack">Express · Prisma · PostgreSQL · RabbitMQ</p>
+      <p>A marketplace matching talent to startups and MVP briefs. Sign-in runs Google identity to JWT, profiles are structured for both sides, and an AI layer parses CVs and job posts into salary-aware recommendations. Resumes arrive as PDF or DOCX, including scanned pages through OCR, and heavy work runs in a message queue behind tiered rate limits.</p>
+      <p class="result">Result: hiring recommendations teams trust, from messy real-world CVs to ranked shortlists.</p>
+    </article>
+
+    <article class="project">
+      <h3>Lucent — headless commerce storefront</h3>
+      <p class="stack">Next.js · Payload CMS · Stripe</p>
+      <p>A luxury shop customers browse with shareable filtered search and variant-safe product pages, buy through a guarded checkout that blocks oversells, and manage through self-serve accounts with order timelines, PDF invoices, reorders and returns. Behind it sits a back office where catalog, orders, reviews, returns, coupons and content pages are all editable without a developer, with fulfillment mail fired from payment webhooks.</p>
+      <p class="result">Result: a store non-technical staff run alone, from merchandising to fulfillment mail.</p>
+    </article>
+
+    <article class="project">
+      <h3>Email systems — Homz and Outfit</h3>
+      <p class="stack">MJML · Nodemailer · ZeptoMail · SES · Mailchimp</p>
+      <p>Modular template packs with shared logo, hero, body and footer partials compiling to responsive HTML. Welcome, OTP, password reset, order confirmation, invoice and lifecycle flows, sent from queued workers and payment webhooks instead of the browser. Table-safe layouts, inline styles and fallbacks tested across Gmail, Outlook and Apple Mail.</p>
+      <p class="result">Result: account, order and billing mail that arrives fast, reads cleanly on phones and never silently fails.</p>
+    </article>
+
+    <article class="project">
+      <h3>Live apps — stores, estate, invoices</h3>
+      <p class="stack">React · Express · MongoDB · Stripe</p>
+      <p>A marketplace storefront with secure purchase flow, a real-estate marketplace with search and agent contact, an invoicing app with Draft to Pending to Paid workflows, and a custom ecommerce admin for products, orders and content. Each one is deployed and taking real traffic, not a demo behind a login wall.</p>
+      <!--
+      <p class="project-links">
+        <a href="https://fortune-ecommerce.vercel.app/" target="_blank" rel="noopener">Store</a>
+        <a href="https://hektoadmin.netlify.app/" target="_blank" rel="noopener">Admin</a>
+        <a href="https://fortuneestate.netlify.app/" target="_blank" rel="noopener">Estate</a>
+        <a href="https://invoice-app-lyart.vercel.app/" target="_blank" rel="noopener">Invoices</a>
+      </p>
+      -->
+    </article>
+  </section>
+
+  <section id="skills" class="section">
+    <h2 class="sec-title">What I work with</h2>
+    <div class="skill-rows">
+      <div class="skill-row">
+        <h3>Languages</h3>
+        <p>TypeScript, JavaScript, Go, SQL, Bash</p>
+      </div>
+      <div class="skill-row">
+        <h3>Frameworks</h3>
+        <p>Node.js, NestJS, Express, Gin, Mastra; React, Next.js, TanStack Start; REST</p>
+      </div>
+      <div class="skill-row">
+        <h3>Web</h3>
+        <p>Tailwind CSS, shadcn, Zustand, React Query, React Hook Form, Zod, Stripe Payment Element</p>
+      </div>
+      <div class="skill-row">
+        <h3>CMS and email</h3>
+        <p>Payload CMS, Strapi, Sanity, layout blocks, SEO fields; MJML, responsive HTML email, transactional flows</p>
+      </div>
+      <div class="skill-row">
+        <h3>Data and Queues</h3>
+        <p>PostgreSQL with Prisma, TypeORM and Drizzle; MongoDB, Redis, Mongoose; BullMQ, River, RabbitMQ, background workers</p>
+      </div>
+      <div class="skill-row">
+        <h3>Auth and payments</h3>
+        <p>JWT, OAuth, OTP, RBAC; Stripe, Paystack</p>
+      </div>
+      <div class="skill-row">
+        <h3>Automation and AI Infrastructure</h3>
+        <p>N8N, Vector Databases, MCP, Multi-Agent Architecture, Evals, Datasets, Observability, Workflows, Harness</p>
+      </div>
+      <div class="skill-row">
+        <h3>Infrastructure</h3>
+        <p>Docker, AWS, DigitalOcean, Cloudflare, Linux, Vercel, nginx, GitHub Actions, Jest, Swagger</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2 class="sec-title">Contact</h2>
+    <p class="lede">I am open to product roles and contract work across frontend, backend, CMS and email. The fastest way to reach me is email.</p>
+    <div class="hero-actions">
+      <a class="btn" href="mailto:imonikheaugbodaga@gmail.com">imonikheaugbodaga@gmail.com</a>
+      <a class="btn-outline" href="https://docs.google.com/document/d/1xCHfAJGJ1-YddRXk8pcirtfGIwJ8XCWfhhvr0ttNskM/edit?usp=sharing" target="_blank" rel="noopener">Resume</a>
+      <a class="btn-outline" href="https://github.com/nikhea" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-outline" href="https://www.linkedin.com/in/imonikheaugbodaga" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year">2026</span> Fortune I. Ugbodaga</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
